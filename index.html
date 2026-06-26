@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dietliciouss — Menu July</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1F5FA6;
+    --blue-700:#16487E;
+    --blue-300:#7AA6D2;
+    --blue-50:#E8F0F8;
+    --bg:#F1F5FA;
+    --paper:#FFFFFF;
+    --ink:#1E2733;
+    --muted:#5E6773;
+    --honey:#E0A12E;
+    --honey-700:#B07E1E;
+    --line:#DCE4EE;
+    --shadow:0 1px 2px rgba(22,40,64,.04), 0 8px 24px rgba(22,40,64,.07);
+    --shadow-lg:0 2px 6px rgba(22,40,64,.06), 0 20px 48px rgba(22,40,64,.14);
+    --radius:18px;
+    --radius-sm:12px;
+    --maxw:1080px;
+    --df:"Bricolage Grotesque",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.5}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  /* ---------- Top bar ---------- */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(241,245,250,.88);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+  .topbar-inner{display:flex;align-items:center;gap:12px;height:60px}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--df);font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--blue-700);text-decoration:none;white-space:nowrap}
+  .brand .dot{color:var(--honey)}
+  .nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{font-size:13.5px;font-weight:600;color:var(--muted);text-decoration:none;padding:8px 13px;border-radius:999px;white-space:nowrap;transition:.18s}
+  .nav a:hover{color:var(--blue-700);background:var(--blue-50)}
+  .nav a.active{color:#fff;background:var(--blue)}
+  .nav a:focus-visible,.brand:focus-visible{outline:2px solid var(--honey);outline-offset:3px;border-radius:6px}
+
+  /* language toggle */
+  .lang{flex:none;display:inline-flex;background:var(--blue-50);border-radius:999px;padding:3px}
+  .lang button{border:0;background:transparent;font-family:var(--df);font-weight:700;font-size:12.5px;color:var(--blue-700);padding:6px 11px;border-radius:999px;cursor:pointer;transition:.15s}
+  .lang button[aria-pressed="true"]{background:var(--blue);color:#fff}
+  .lang button:focus-visible{outline:2px solid var(--honey);outline-offset:2px}
+
+  /* ---------- Hero ---------- */
+  .hero{background:radial-gradient(120% 120% at 12% -10%, #2C77BC 0%, var(--blue) 44%, var(--blue-700) 100%);color:#EAF1F9;border-radius:0 0 28px 28px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;background-image:radial-gradient(circle at 1px 1px,#fff 1px,transparent 0);background-size:26px 26px;mix-blend-mode:overlay}
+  .hero-inner{padding:46px 0 40px;position:relative;z-index:1}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--df);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#BFD6EE;margin-bottom:18px}
+  .sprig{flex:none}
+  h1.title{font-family:var(--df);font-weight:800;letter-spacing:-.03em;line-height:.98;font-size:clamp(40px,8vw,72px);margin:0 0 18px;color:#fff}
+  h1.title em{font-style:normal;color:var(--honey)}
+  .lede{max-width:54ch;font-size:clamp(15px,2.4vw,17px);color:#DCE7F3;margin:0 0 26px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+  .chip{font-size:13px;font-weight:600;color:#DCE8F4;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 13px;background:rgba(255,255,255,.07)}
+  .chip b{color:#fff}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--df);font-weight:700;font-size:15.5px;text-decoration:none;border-radius:999px;padding:13px 22px;cursor:pointer;border:0;transition:.18s}
+  .btn-primary{background:var(--honey);color:#3A2A06}
+  .btn-primary:hover{background:#ecac3c;transform:translateY(-1px)}
+  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-ghost:hover{background:rgba(255,255,255,.2)}
+  .btn-line{background:#fff;color:var(--blue-700);border:1.5px solid var(--blue-300)}
+  .btn-line:hover{background:var(--blue-50)}
+  .btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+  /* ---------- Sections ---------- */
+  section{scroll-margin-top:76px;padding:54px 0 8px}
+  .sec-head{margin-bottom:26px}
+  .sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--df);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+  .sec-eyebrow .sprig path{stroke:var(--blue)}
+  h2{font-family:var(--df);font-weight:800;letter-spacing:-.025em;font-size:clamp(27px,4.6vw,38px);line-height:1.02;margin:0;color:var(--blue-700)}
+  .sec-sub{color:var(--muted);font-size:15px;margin:9px 0 0;max-width:60ch}
+  .sub-label{font-family:var(--df);font-weight:700;font-size:15px;color:var(--ink);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
+  .sub-label::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.g3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.g3,.g2{grid-template-columns:1fr}}
+
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);position:relative;transition:.18s;display:flex;flex-direction:column}
+  .card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);border-color:#cdd8e6}
+  .card .name{font-family:var(--df);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--blue-700);margin:0 64px 6px 0;line-height:1.15}
+  .card .desc{font-size:13.5px;color:var(--muted);margin:0 0 14px;flex:1}
+  .card .desc b{color:var(--ink);font-weight:600}
+  .meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+  .kcal{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue);background:var(--blue-50);border-radius:999px;padding:5px 10px}
+  .tag{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:#EEF1F5;border-radius:999px;padding:5px 10px}
+  .price{position:absolute;top:16px;right:16px;font-family:var(--df);font-weight:800;font-size:15px;color:#3A2A06;background:var(--honey);border-radius:999px;padding:6px 12px;line-height:1}
+  .price small{font-size:10px;font-weight:700;opacity:.8}
+  .flag{position:absolute;font-family:var(--df);font-weight:800;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--honey-700);padding:5px 11px;border-radius:999px;box-shadow:var(--shadow)}
+
+  .pkg{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+  .pkg-top{background:var(--blue);color:#DCE7F3;padding:20px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+  .pkg-top h3{font-family:var(--df);font-weight:800;font-size:21px;margin:0;color:#fff;letter-spacing:-.02em;line-height:1.05}
+  .pkg-top .sub{font-size:13px;color:#AFC8E2;margin-top:5px}
+  .stamp{flex:none;width:74px;height:74px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--honey);color:#3A2A06;font-family:var(--df);font-weight:800;line-height:1;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .stamp .rm{font-size:11px;letter-spacing:.05em}
+  .stamp .num{font-size:25px;margin:1px 0}
+  .pkg-body{padding:20px 22px}
+  .pkg-row{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .pkg-row:last-child{border-bottom:0;padding-bottom:0}
+  .pkg-row:first-child{padding-top:0}
+  .pkg-row .qty{font-family:var(--df);font-weight:800;color:var(--honey-700);font-size:14px;flex:none;min-width:30px}
+  .pkg-row .txt{font-size:14px}
+  .pkg-row .txt .k{display:inline-block;margin-top:3px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue);background:var(--blue-50);border-radius:999px;padding:3px 9px}
+  .note{font-size:12.5px;color:var(--muted);margin-top:14px;font-style:italic}
+
+  .week{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
+  .week h4{font-family:var(--df);font-weight:800;font-size:18px;margin:0;color:var(--blue-700)}
+  .week .dates{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+  .pill{font-size:12px;font-weight:600;border-radius:999px;padding:5px 11px}
+  .pill.order{background:#FBF0D8;color:var(--honey-700)}
+  .pill.deliv{background:var(--blue-50);color:var(--blue)}
+  .week ul{margin:0;padding-left:18px}
+  .week li{font-size:14px;margin-bottom:8px}
+  .week li:last-child{margin-bottom:0}
+
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+  .panel h3{font-family:var(--df);font-weight:700;font-size:17px;margin:0 0 12px;color:var(--blue-700);display:flex;align-items:center;gap:9px}
+  .panel ul{margin:0;padding-left:18px}
+  .panel li{font-size:14px;margin-bottom:8px;color:#37414e}
+  .panel li b{color:var(--ink)}
+  .steps{counter-reset:s;list-style:none;padding:0;margin:0}
+  .steps li{position:relative;padding:0 0 14px 38px;font-size:14px}
+  .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--df);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .steps li:last-child{padding-bottom:0}
+  .rank{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .rank span{font-size:12.5px;font-weight:600;border-radius:999px;padding:6px 12px;background:var(--blue-50);color:var(--blue-700)}
+  .rank span.best{background:var(--blue);color:#fff}
+
+  .edu{background:linear-gradient(180deg,#fff,#FAFCFF);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:var(--radius-sm);padding:18px 20px}
+  .edu h4{font-family:var(--df);font-weight:700;font-size:15px;margin:0 0 8px;color:var(--blue-700)}
+  .edu p{margin:0;font-size:13.5px;color:var(--muted)}
+  .ideas{margin:8px 0 0;padding-left:16px}
+  .ideas li{font-size:12.5px;color:var(--muted);margin-bottom:5px}
+
+  footer{background:var(--blue-700);color:#C8D9EC;margin-top:60px;border-radius:28px 28px 0 0}
+  .foot-inner{padding:46px 0 40px;text-align:center}
+  footer h3{font-family:var(--df);font-weight:800;color:#fff;font-size:clamp(24px,4vw,34px);margin:0 0 10px;letter-spacing:-.02em}
+  footer p{margin:0 auto 22px;max-width:46ch;font-size:14.5px;color:#AFC4DD}
+  .handle{display:inline-block;margin-top:24px;font-weight:600;color:#DCE7F3;text-decoration:none}
+  .handle:hover{color:#fff}
+  .foot-meta{font-size:12px;color:#7F97B3;margin-top:8px}
+
+  .order-bar{display:none}
+  @media(max-width:560px){
+    .hero-inner{padding:38px 0 34px}
+    section{padding:44px 0 6px}
+    .order-bar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}
+    .order-bar a{flex:1;justify-content:center;box-shadow:var(--shadow-lg)}
+    body{padding-bottom:74px}
+  }
+
+  .card{overflow:hidden}
+  .card-img,.pkg-img{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:var(--blue-50)}
+  .card-img{aspect-ratio:4/3;margin:-20px -20px 16px;border-radius:0}
+  .card-img + .name{margin-right:0}
+  .pkg-img{aspect-ratio:16/10}
+  .img-full{background-size:contain;background-color:#fff}
+  .card-img.img-full,.pkg-img.img-full{aspect-ratio:4/5}
+
+  .ph-muffin{background-image:url("images/dish-0.jpg")}
+  .ph-muffinset{background-image:url("images/dish-1.jpg")}
+  .ph-patty{background-image:url("images/dish-2.jpg")}
+  .ph-wrap{background-image:url("images/dish-3.jpg")}
+  .ph-oats{background-image:url("images/dish-4.jpg")}
+  .ph-chicken{background-image:url("images/dish-5.jpg")}
+  .ph-salmon{background-image:url("images/dish-6.jpg")}
+  .ph-dory{background-image:url("images/dish-7.jpg")}
+  .ph-protein{background-image:url("images/dish-8.jpg")}
+  .ph-bento{background-image:url("images/dish-9.jpg")}
+  .ph-valuemeal{background-image:url("images/dish-10.jpg")}
+  .ph-7days{background-image:url("images/dish-11.jpg")}
+
+  .ph-budgetbreakfast{background-image:url("images/dish-12.jpg")}
+  .ph-wrapset{background-image:url("images/dish-13.jpg")}
+  .ph-basmati{background-image:url("images/dish-14.jpg")}
+  .ph-butter{background-image:url("images/dish-15.jpg")}
+  .ph-spaghetti{background-image:url("images/dish-16.jpg")}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sprig" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M12 21V7"/><path d="M12 12c-3 0-5-1.4-5.4-4.2C8.7 7.6 11.3 8.6 12 12z"/><path d="M12 9c3 0 5-1.4 5.4-4.2C15.3 4.6 12.7 5.6 12 9z"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">Dietliciouss<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Menu sections">
+      <a href="#pakej" class="i18n" data-en="July Packages">Pakej Julai</a>
+      <a href="#breakfast" class="i18n" data-en="Breakfast">Breakfast</a>
+      <a href="#protein">Protein</a>
+      <a href="#carbs">Carbs</a>
+      <a href="#bento">Bento</a>
+      <a href="#tmad">2MAD</a>
+      <a href="#simpan" class="i18n" data-en="Store &amp; Reheat">Simpan &amp; Panas</a>
+      <a href="#info" class="i18n" data-en="Order &amp; Delivery">Order &amp; Delivery</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="bm" aria-pressed="true">BM</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="wrap hero-inner">
+    <span class="eyebrow"><svg class="sprig" width="16" height="16"><use href="#sprig"/></svg> <span class="i18n" data-en="July 2026 Menu">Menu Julai 2026</span></span>
+    <h1 class="title i18n" data-en="Eating healthy never<br>tasted <em>this good.</em>">Makan sihat tak pernah<br><em>sesedap</em> ni.</h1>
+    <p class="lede i18n" data-en="11 years in the industry, 500+ recipes refined — all for one reason: to give you healthy food that actually tastes good, reheats easily, and makes it simple to stay consistent.">11 tahun dalam industri, 500+ resepi di-R&amp;D — semua untuk satu sebab: bagi kau makanan sihat yang betul-betul sedap, mudah panas, dan senang kekal konsisten.</p>
+    <div class="chips">
+      <span class="chip i18n" data-en="<b>11+</b> years experience"><b>11+</b> tahun pengalaman</span>
+      <span class="chip i18n" data-en="<b>500+</b> recipes tested"><b>500+</b> resepi diuji</span>
+      <span class="chip i18n" data-en="No MSG or added sugar">Tanpa MSG &amp; gula tambahan</span>
+      <span class="chip i18n" data-en="Frozen — easy to store">Frozen — mudah simpan</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary js-order" target="_blank" rel="noopener" href="#">Order Online <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <a class="btn btn-ghost js-wa" target="_blank" rel="noopener" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.8l-.3-.2-2.8.8.8-2.7-.2-.3A8 8 0 0 1 12 4zm-2.6 3.8c-.2 0-.5 0-.7.4-.3.4-.9 1-.9 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.1 2.3 1 2.8.8 3.3.7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.4-.1-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- PAKEJ JULAI -->
+  <section id="pakej">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> <span class="i18n" data-en="This Month's Packages">Pakej Bulan Ini</span></span>
+      <h2 class="i18n" data-en="July Packages">Pakej Julai</h2>
+      <p class="sec-sub i18n" data-en="Monthly budget packages — affordable, tasty, and built to keep you consistent all month.">Pakej budget bulanan — jimat, sedap, dan dirancang untuk kau kekal konsisten sepanjang bulan.</p>
+    </div>
+    <div class="grid g2">
+      <div class="pkg">
+        <div class="pkg-img ph-valuemeal" role="img" aria-label="Budget Diet Meal"></div>
+        <div class="pkg-top">
+          <div><h3>Budget Diet Meal</h3><div class="sub">Lunch / Dinner · The Smart Saver Pack</div></div>
+          <div class="stamp"><span class="rm">RM</span><span class="num">100</span></div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-row"><span class="qty">5×</span><span class="txt">Flavoured Rice (100g) + Chicken Tenders (~100g)<br><span class="k">~420 kcal</span></span></div>
+          <div class="pkg-row"><span class="qty">5×</span><span class="txt">Spaghetti (130g) + Chicken Tenders (~100g)<br><span class="k">~450 kcal</span></span></div>
+          <p class="note i18n" data-en="*Refer to the weekly menu for flavours. Pre-order. Delivery: 11 &amp; 25 July.">*Rujuk weekly menu untuk flavour. Pre-order. Delivery: 11 &amp; 25 Julai.</p>
+        </div>
+      </div>
+      <div class="pkg">
+        <div class="pkg-img ph-budgetbreakfast" role="img" aria-label="Budget Breakfast"></div>
+        <div class="pkg-top">
+          <div><h3>Budget Breakfast</h3><div class="sub">Grab &amp; Go · Quick Bites, Lower Cost</div></div>
+          <div class="stamp"><span class="rm">RM</span><span class="num">100</span></div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-row"><span class="qty">5×</span><span class="txt">Sourdough Chicken &amp; Cheese Muffin<br><span class="k">390 kcal</span></span></div>
+          <div class="pkg-row"><span class="qty">5×</span><span class="txt">Wholemeal Wrap Chicken<br><span class="k">415 kcal</span></span></div>
+          <p class="note i18n" data-en="Pre-order. Perfect for quick breakfasts all week.">Pre-order. Sesuai untuk sarapan pantas sepanjang minggu.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sub-label i18n" data-en="July Weekly Menu">Weekly Menu Julai</div>
+    <div class="grid g2">
+      <div class="week">
+        <h4>Week 2</h4>
+        <div class="dates">
+          <span class="pill order i18n" data-en="Pre-order until 7 July">Pre-order sehingga 7 Julai</span>
+          <span class="pill deliv i18n" data-en="Delivery / Self Pickup 11 July">Delivery/Self Pickup 11 Julai</span>
+        </div>
+        <ul>
+          <li>5× Lemon Rice + Sambal Berlado Chicken<br><span class="k">325 kcal · Protein 29g · Karbo 33g · Lemak 8.5g</span></li>
+          <li>5× Spaghetti Aglio + Mushroom Chicken<br><span class="k">385 kcal · Protein 31g · Karbo 38g · Lemak 11g</span></li>
+        </ul>
+      </div>
+      <div class="week">
+        <h4>Week 4</h4>
+        <div class="dates">
+          <span class="pill order i18n" data-en="Pre-order until 21 July">Pre-order sehingga 21 Julai</span>
+          <span class="pill deliv i18n" data-en="Delivery / Self Pickup 25 July">Delivery/Self Pickup 25 Julai</span>
+        </div>
+        <ul>
+          <li>5× Butter Rice + Roasted Chicken<br><span class="k">325 kcal · Protein 34g · Karbo 28g · Lemak 7.5g</span></li>
+          <li>5× Spaghetti + Meatballs<br><span class="k">470 kcal · Protein 20g · Karbo 40g · Lemak 24g</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREAKFAST -->
+  <section id="breakfast">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> <span class="i18n" data-en="Breakfast">Sarapan</span></span>
+      <h2>Breakfast Menu</h2>
+      <p class="sec-sub i18n" data-en="Sourdough muffin, wholemeal wrap &amp; overnight oats — all frozen, just reheat and eat.">Sourdough muffin, wholemeal wrap &amp; overnight oats — semua frozen, tinggal panas dan makan.</p>
+    </div>
+
+    <div class="sub-label">English Muffin</div>
+    <div class="grid g3">
+      <div class="card">
+        <span class="price"><small>RM</small> 12</span>
+        <div class="card-img ph-muffin" role="img" aria-label="Sourdough English Muffin — Chicken"></div>
+        <p class="name">Sourdough English Muffin — Chicken</p>
+        <p class="desc i18n" data-en="Homemade chicken-breast patty (100g) with no MSG or sugar, egg, cheese &amp; low-cal sauce. <b>Packaging:</b> Wrapping paper.">Homemade patty (100g) dari chicken breast tanpa MSG &amp; gula, telur, cheese, sos rendah kalori. <b>Packaging:</b> Wrapping paper.</p>
+        <div class="meta"><span class="kcal">415 kcal</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 13</span>
+        <div class="card-img ph-muffin" role="img" aria-label="Sourdough English Muffin — Beef"></div>
+        <p class="name">Sourdough English Muffin — Beef</p>
+        <p class="desc i18n" data-en="Homemade minced-beef patty (100g) with no MSG or sugar, egg, cheese &amp; low-cal sauce. <b>Packaging:</b> Wrapping paper.">Homemade patty (100g) dari daging cincang tanpa MSG &amp; gula, telur, cheese, sos rendah kalori. <b>Packaging:</b> Wrapping paper.</p>
+        <div class="meta"><span class="kcal">470 kcal</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 70</span>
+        <div class="card-img ph-muffinset" role="img" aria-label="Sourdough Muffin Sets"></div>
+        <p class="name">Sourdough Muffin Sets</p>
+        <p class="desc i18n" data-en="Chicken &amp; beef combo for a full week of breakfasts. <b>Packaging:</b> Wrapping paper.">Gabungan ayam &amp; daging untuk satu minggu sarapan. <b>Packaging:</b> Wrapping paper.</p>
+        <div class="meta"><span class="tag">3× Chicken</span><span class="tag">3× Beef</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 55</span>
+        <div class="card-img ph-patty" role="img" aria-label="Herbs Paprika Chicken Patty"></div>
+        <p class="name">Herbs Paprika Chicken Patty</p>
+        <p class="desc i18n" data-en="Ready-to-eat chicken patties (frozen). Just reheat &amp; serve with your bread of choice. <b>No sugar, no MSG, no flour.</b>">Ready-to-eat chicken patty (frozen). Tinggal reheat &amp; hidang dengan roti pilihan. <b>No sugar, no MSG, no flour.</b></p>
+        <div class="meta"><span class="tag">10× Patty</span></div>
+      </div>
+    </div>
+
+    <div class="sub-label">Wholemeal Wrap</div>
+    <div class="grid g3">
+      <div class="card">
+        <span class="price"><small>RM</small> 11</span>
+        <div class="card-img ph-wrap" role="img" aria-label="Wholemeal Wrap — Chicken"></div>
+        <p class="name">Wholemeal Wrap — Chicken</p>
+        <p class="desc i18n" data-en="Homemade chicken patty (100g), salad, carrot, cheese &amp; BBQ sauce. <b>Wrapping paper.</b>">Homemade patty ayam (100g), salad, carrot, cheese &amp; sos BBQ. <b>Wrapping paper.</b></p>
+        <div class="meta"><span class="kcal">415 kcal</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 12</span>
+        <div class="card-img ph-wrap" role="img" aria-label="Wholemeal Wrap — Beef"></div>
+        <p class="name">Wholemeal Wrap — Beef</p>
+        <p class="desc i18n" data-en="Homemade beef patty (100g), salad, carrot, cheese &amp; black pepper sauce. <b>Wrapping paper.</b>">Homemade patty daging (100g), salad, carrot, cheese &amp; sos blackpepper. <b>Wrapping paper.</b></p>
+        <div class="meta"><span class="kcal">440 kcal</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 65</span>
+        <div class="card-img ph-wrapset" role="img" aria-label="Wholemeal Wrap Sets"></div>
+        <p class="name">Wholemeal Wrap Sets</p>
+        <p class="desc i18n" data-en="Chicken &amp; beef combo for breakfasts all week.">Combo ayam &amp; daging untuk sarapan sepanjang minggu.</p>
+        <div class="meta"><span class="tag">3× Chicken</span><span class="tag">3× Beef</span></div>
+      </div>
+    </div>
+
+    <div class="sub-label i18n" data-en="Overnight Oats &amp; More">Overnight Oats &amp; Lain-lain</div>
+    <div class="grid g3">
+      <div class="card">
+        <span class="price"><small>RM</small> 13</span>
+        <div class="card-img ph-oats" role="img" aria-label="Overnight Oats — Mango"></div>
+        <p class="name">Overnight Oats — Mango</p>
+        <p class="desc i18n" data-en="Rolled oats, milk, honey, sunflower &amp; pumpkin seeds, chia, hawaiian coconut, fresh mango. Thaw overnight, ready to eat. <b>300ml jar.</b>">Rolled oats, susu, madu, sunflower &amp; pumpkin seed, chia, hawaiian coconut, mangga segar. Nyahbeku semalaman, terus makan. <b>300ml jar.</b></p>
+        <div class="meta"><span class="kcal">381 kcal</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 13</span>
+        <div class="card-img ph-oats" role="img" aria-label="Overnight Oats — Chocolate Raisin"></div>
+        <p class="name">Overnight Oats — Chocolate Raisin</p>
+        <p class="desc i18n" data-en="Rolled oats, milk, honey, seeds, chia, dark cocoa, semi-sweet choc chips &amp; raisins. <b>300ml jar.</b>">Rolled oats, susu, madu, seeds, chia, serbuk dark coklat, semi-sweet choc chip &amp; raisin. <b>300ml jar.</b></p>
+        <div class="meta"><span class="kcal">419 kcal</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 13</span>
+        <div class="card-img ph-oats" role="img" aria-label="Overnight Oats — Vanilla Cranberry"></div>
+        <p class="name">Overnight Oats — Vanilla Cranberry</p>
+        <p class="desc i18n" data-en="Rolled oats, milk, honey, seeds, chia, vanilla, white choc chips &amp; dried cranberries. <b>300ml jar.</b>">Rolled oats, susu, madu, seeds, chia, vanilla, white choc chip &amp; dry cranberry. <b>300ml jar.</b></p>
+        <div class="meta"><span class="kcal">398 kcal</span></div>
+      </div>
+    </div>
+
+    <div class="sub-label">Breakfast Package</div>
+    <div class="grid g2">
+      <div class="pkg">
+        <div class="pkg-img ph-7days" role="img" aria-label="7-in-1 Breakfast Sets"></div>
+        <div class="pkg-top">
+          <div><h3>7-in-1 Breakfast Sets</h3><div class="sub i18n" data-en="One week of breakfast, one pack">Satu minggu sarapan, satu pakej</div></div>
+          <div class="stamp"><span class="rm">RM</span><span class="num">84</span></div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Sourdough Muffin (chicken &amp; beef)</span></div>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Wholemeal Wrap (chicken &amp; beef)</span></div>
+          <div class="pkg-row"><span class="qty">3×</span><span class="txt">Overnight Oats (mango, chocolate raisin, vanilla cranberry)</span></div>
+        </div>
+      </div>
+      <div class="edu" style="align-self:center">
+        <h4 class="i18n" data-en="Did You Know? — Sourdough Benefits">Did You Know? — Kebaikan Sourdough</h4>
+        <p class="i18n" data-en="Easier to digest (fermentation breaks down gluten &amp; sugar), low GI for stable energy, good for the gut, fewer additives, and a unique natural tang.">Lebih mudah hadam (fermentasi pecahkan gluten &amp; gula), GI rendah untuk tenaga stabil, baik untuk usus, kurang bahan kimia, dan rasa masam natural yang unik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTEIN -->
+  <section id="protein">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> Protein</span>
+      <h2>Protein Menu</h2>
+      <p class="sec-sub i18n" data-en="Vacuum packed (frozen), 10 packs each. Mix &amp; match with your choice of carbs.">Vacuum pack (frozen), 10 pack setiap satu. Mix &amp; match dengan carbs pilihan kau.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <span class="price"><small>RM</small> 110</span>
+        <div class="card-img ph-chicken img-full" role="img" aria-label="Mix Chicken"></div>
+        <p class="name">Mix Chicken</p>
+        <div class="desc i18n" data-en="Chicken chop (whole leg), 150–190g/pack. <b>Flavour of the month:</b> Spicy Garlic &amp; BBQ.<ul class='ideas'><li>Lunch: chicken + ghee rice + steamed veg</li><li>Healthy wrap, chicken bowl, or air-fryer snack</li></ul>">Chicken chop (whole leg), 150–190g/pack. <b>Flavour bulan ini:</b> Spicy Garlic &amp; BBQ.<ul class="ideas"><li>Lunch: ayam + nasi ghee + sayur rebus</li><li>Wrap sihat, chicken bowl, atau snek air-fryer</li></ul></div>
+        <div class="meta"><span class="kcal">270–290 kcal</span><span class="tag">10 pack</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 200</span>
+        <div class="card-img ph-salmon img-full" role="img" aria-label="Mix Salmon"></div>
+        <p class="name">Mix Salmon</p>
+        <div class="desc i18n" data-en="Salmon fillet, 150–190g/pack. <b>Flavour of the month:</b> Lemon Cajun &amp; Teriyaki.<ul class='ideas'><li>Salmon rice bowl + edamame + seaweed</li><li>Western: salmon + mashed potato + salad</li></ul>">Salmon fillet, 150–190g/pack. <b>Flavour bulan ini:</b> Lemon Cajun &amp; Teriyaki.<ul class="ideas"><li>Salmon rice bowl + edamame + seaweed</li><li>Western: salmon + mashed potato + salad</li></ul></div>
+        <div class="meta"><span class="kcal">350–370 kcal</span><span class="tag">10 pack</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 110</span>
+        <div class="card-img ph-dory img-full" role="img" aria-label="Mix Dory"></div>
+        <p class="name">Mix Dory</p>
+        <div class="desc i18n" data-en="Dory fillet, 170–210g. <b>Flavour of the month:</b> Masala &amp; Spicy Thai.<ul class='ideas'><li>Dory + rice/quinoa + veg</li><li>Tuck into a wrap for lunch on-the-go</li></ul>">Dory fillet, 170–210g. <b>Flavour bulan ini:</b> Masala &amp; Spicy Thai.<ul class="ideas"><li>Dory + nasi/quinoa + sayur</li><li>Isi dalam wrap untuk lunch on-the-go</li></ul></div>
+        <div class="meta"><span class="kcal">190–212 kcal</span><span class="tag">10 pack</span></div>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="pkg">
+        <div class="pkg-img ph-protein img-full" role="img" aria-label="Mix Protein"></div>
+        <div class="pkg-top">
+          <div><h3>Mix Protein</h3><div class="sub i18n" data-en="Our best-selling combo — variety, zero thinking">Combo paling laku — variasi tanpa fikir</div></div>
+          <div class="stamp"><span class="rm">RM</span><span class="num">145</span></div>
+        </div>
+        <div class="pkg-body" style="position:relative">
+          <span class="flag" style="top:-32px;left:0">★ Best Seller</span>
+          <div class="pkg-row"><span class="qty">5×</span><span class="txt">Chicken</span></div>
+          <div class="pkg-row"><span class="qty">3×</span><span class="txt">Dory</span></div>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Salmon</span></div>
+        </div>
+      </div>
+      <div class="edu" style="align-self:center">
+        <h4 class="i18n" data-en="Why Vacuum Pack?">Kenapa Vacuum Pack?</h4>
+        <p class="i18n" data-en="Lasts longer, stays fresh &amp; flavourful, prevents freezer burn, saves storage/shipping space, and lowers contamination risk.">Tahan lebih lama, kekal segar &amp; berperisa, elak freezer burn, jimat ruang simpanan/penghantaran, dan kurangkan risiko pencemaran.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARBS -->
+  <section id="carbs">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> Carbs</span>
+      <h2>Carbs Menu</h2>
+      <p class="sec-sub i18n" data-en="Vacuum packed (frozen), 1 pack each. The perfect match for your protein of choice.">Vacuum pack (frozen), 1 pack setiap satu. Pasangan sempurna untuk protein pilihan kau.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <span class="price"><small>RM</small> 5</span>
+        <div class="card-img ph-basmati" role="img" aria-label="Basmati Rice"></div>
+        <p class="name">Basmati Rice</p>
+        <p class="desc">Plain basmati rice + coconut oil. <b>100g/pack.</b></p>
+        <div class="meta"><span class="kcal">161 kcal</span><span class="tag">1 pack</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 5.50</span>
+        <div class="card-img ph-butter" role="img" aria-label="Butter Rice"></div>
+        <p class="name">Butter Rice</p>
+        <p class="desc">Basmati + yellow onion, white pepper, turmeric, chicken stock, salt &amp; butter. <b>100g/pack.</b></p>
+        <div class="meta"><span class="kcal">169 kcal</span><span class="tag">1 pack</span></div>
+      </div>
+      <div class="card">
+        <span class="price"><small>RM</small> 6</span>
+        <div class="card-img ph-spaghetti" role="img" aria-label="Spaghetti"></div>
+        <p class="name">Spaghetti</p>
+        <p class="desc">Spaghetti + oil, garlic, chili flakes, black pepper, parsley, oregano, basil, chicken stock &amp; salt. <b>150g/pack.</b></p>
+        <div class="meta"><span class="kcal">302 kcal</span><span class="tag">1 pack</span></div>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="pkg">
+        <div class="pkg-top">
+          <div><h3>Mix Carbs Sets</h3><div class="sub i18n" data-en="A week's worth of carbs">Stok carbs untuk seminggu</div></div>
+          <div class="stamp"><span class="rm">RM</span><span class="num">50</span></div>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-row"><span class="qty">4×</span><span class="txt">Basmati Rice</span></div>
+          <div class="pkg-row"><span class="qty">3×</span><span class="txt">Butter Rice</span></div>
+          <div class="pkg-row"><span class="qty">3×</span><span class="txt">Spaghetti</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENTO -->
+  <section id="bento">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> Bento</span>
+      <h2>Bento Menu</h2>
+      <p class="sec-sub i18n" data-en="Not into vacuum packs? Complete bento with carbs + protein + veggies in one container. Heat &amp; enjoy.">Tak nak vacuum pack? Bento lengkap carbs + protein + veggies dalam satu bekas. Panas &amp; enjoy.</p>
+    </div>
+    <div class="grid g2">
+      <div class="pkg">
+        <div class="pkg-img ph-bento" role="img" aria-label="Bento Sets"></div>
+        <div class="pkg-top">
+          <div><h3>Bento Sets</h3><div class="sub">Heat-resistant container (frozen) · 7 pack</div></div>
+          <div class="stamp"><span class="rm">RM</span><span class="num">130</span></div>
+        </div>
+        <div class="pkg-body" style="position:relative">
+          <span class="flag" style="top:-32px;left:0">★ Best Seller</span>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Flavour Basmati Rice + Dory + Veggies</span></div>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Flavour Basmati Rice + Chicken + Veggies</span></div>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Spaghetti + Salmon Steak + Veggies</span></div>
+          <div class="pkg-row"><span class="qty">1×</span><span class="txt">Spaghetti + Chicken + Veggies</span></div>
+          <p class="note i18n" data-en="Calories: 300–450 kcal/set. Microwave 2–3 min or steam 6–7 min from frozen.">Kalori: 300–450 kcal/set. Microwave 2–3 min atau kukus 6–7 min dari frozen.</p>
+        </div>
+      </div>
+      <div class="edu" style="align-self:center">
+        <h4 class="i18n" data-en="How to Heat Bento">Cara Panas Bento</h4>
+        <p class="i18n" data-en="<b>Microwave:</b> loosen the lid slightly, heat 2–3 min (check every minute, don't over-heat).<br><br><b>Steam:</b> from frozen, steam 6–7 min without opening the lid until fully hot."><b>Microwave:</b> longgarkan sedikit penutup, panas 2–3 min (check tiap minit, jangan over-heat).<br><br><b>Kukus:</b> dari frozen, kukus 6–7 min tanpa buka penutup sehingga panas sepenuhnya.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2MAD -->
+  <section id="tmad">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> <span class="i18n" data-en="Diet Package">Pakej Diet</span></span>
+      <h2>2MAD Package</h2>
+      <p class="sec-sub i18n" data-en="2 Meals A Day. New to dieting but afraid of getting bored fast? This package keeps you consistent — an on-point, tasty menu. Skip breakfast, go straight to brunch &amp; dinner.">2 Meals A Day. Baru nak start diet tapi takut cepat muak? Pakej ni bantu kau konsisten — menu on-point &amp; sedap. Skip sarapan, terus brunch &amp; dinner.</p>
+    </div>
+    <div class="grid g2">
+      <div class="pkg">
+        <div class="pkg-img ph-7days" role="img" aria-label="7 Brunch Meals"></div>
+        <div class="pkg-top"><div><h3>7 Brunch Meals</h3><div class="sub i18n" data-en="Best eaten 11 am – 12 noon">Sesuai dimakan 11 pagi – 12 tengahari</div></div></div>
+        <div class="pkg-body">
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Sourdough Muffin (chicken &amp; beef)</span></div>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Wholemeal Wrap (chicken &amp; beef)</span></div>
+          <div class="pkg-row"><span class="qty">3×</span><span class="txt">Overnight Oats (mango, chocolate raisin, vanilla cranberry)</span></div>
+        </div>
+      </div>
+      <div class="pkg">
+        <div class="pkg-img ph-bento" role="img" aria-label="7 Dinner Meals"></div>
+        <div class="pkg-top"><div><h3>7 Dinner Meals</h3><div class="sub i18n" data-en="Best eaten 6 – 7 pm">Sesuai dimakan 6 – 7 petang</div></div></div>
+        <div class="pkg-body">
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Flavour Basmati Rice + Dory + Veggies</span></div>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Flavour Basmati Rice + Chicken + Veggies</span></div>
+          <div class="pkg-row"><span class="qty">2×</span><span class="txt">Spaghetti + Salmon Steak + Veggies</span></div>
+          <div class="pkg-row"><span class="qty">1×</span><span class="txt">Spaghetti + Chicken + Veggies</span></div>
+          <p class="note i18n" data-en="Calories: 300–450 kcal/set.">Kalori: 300–450 kcal/set.</p>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px;background:var(--blue);color:#DCE7F3;border-radius:var(--radius);padding:18px 22px">
+      <div class="stamp" style="width:78px;height:78px"><span class="rm">RM</span><span class="num" style="font-size:26px">214</span></div>
+      <div>
+        <div class="i18n" data-en="14 meals · brunch + dinner" style="font-family:var(--df);font-weight:800;color:#fff;font-size:18px">14 meal · brunch + dinner</div>
+        <div class="i18n" data-en="Tip: don't forget water + a pinch of celtic/himalayan salt for electrolytes." style="font-size:13px;color:#AFC8E2;margin-top:3px">Tip: jangan lupa air putih + secubit celtic/himalayan salt untuk electrolyte.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORAGE & REHEAT -->
+  <section id="simpan">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> <span class="i18n" data-en="Guide">Panduan</span></span>
+      <h2 class="i18n" data-en="Store &amp; Reheat">Simpan &amp; Panaskan</h2>
+      <p class="sec-sub i18n" data-en="Storage: <b>Chiller 2–3 days</b> · <b>Freezer 1–2 months.</b> Follow the reheat guide for best results.">Simpanan: <b>Chiller 2–3 hari</b> · <b>Freezer 1–2 bulan.</b> Ikut panduan reheat untuk hasil terbaik.</p>
+    </div>
+    <div class="grid g2">
+      <div class="panel">
+        <h3><svg class="sprig" width="16" height="16" style="color:var(--blue)"><use href="#sprig"/></svg> English Muffin &amp; Wholemeal Wrap</h3>
+        <ul>
+          <li class="i18n" data-en="<b>Oven / oven toaster</b> — most even. 160°C, from frozen without paper, bake 8–10 min."><b>Oven / oven toaster</b> — paling sekata. 160°C, dari frozen tanpa kertas, bakar 8–10 min.</li>
+          <li class="i18n" data-en="<b>Air fryer</b> — slightly crispy outside. Wrap in foil, 160–170°C, 4–6 min."><b>Air fryer</b> — luar sedikit crispy. Balut foil, 160–170°C, 4–6 min.</li>
+          <li class="i18n" data-en="<b>Microwave</b> — softest &amp; moist. Keep it wrapped, 1m30s–2 min, rest 1 min."><b>Microwave</b> — paling lembut &amp; moist. Jangan buka balutan, 1m30s–2 min, rehat 1 min.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3><svg class="sprig" width="16" height="16" style="color:var(--blue)"><use href="#sprig"/></svg> Vacuum Pack Protein &amp; Carbs</h3>
+        <ul>
+          <li class="i18n" data-en="<b>Boil</b> — most recommended. Gentle simmer, drop in the unopened pack, 8–12 min. Stays juicy."><b>Rebus</b> — paling recommended. Air mendidih perlahan, masuk pack tanpa buka, 8–12 min. Kekal juicy.</li>
+          <li class="i18n" data-en="<b>Steam</b> — gentle, won't ruin texture. 10–12 min."><b>Kukus</b> — gentle, tak rosakkan tekstur. 10–12 min.</li>
+          <li class="i18n" data-en="<b>Air fryer</b> — protein only (not rice/pasta). Remove from plastic, 160°C, 8–10 min."><b>Air fryer</b> — protein sahaja (bukan nasi/pasta). Keluarkan dari plastik, 160°C, 8–10 min.</li>
+          <li class="i18n" data-en="<b>Microwave</b> — fastest but protein toughens easily. Poke 1–2 holes, 2–3 min."><b>Microwave</b> — paling cepat tapi protein mudah keras. Cucuk 1–2 lubang, 2–3 min.</li>
+        </ul>
+        <div class="rank">
+          <span class="best i18n" data-en="1. Boil">1. Rebus</span>
+          <span class="i18n" data-en="2. Steam">2. Kukus</span>
+          <span>3. Air fryer</span>
+          <span>4. Microwave</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section id="info">
+    <div class="sec-head">
+      <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> Order &amp; Delivery</span>
+      <h2 class="i18n" data-en="How to Order &amp; Delivery">Cara Order &amp; Penghantaran</h2>
+    </div>
+    <div class="grid g3">
+      <div class="panel">
+        <h3 class="i18n" data-en="How to Order">Cara Order</h3>
+        <ol class="steps">
+          <li class="i18n" data-en="WhatsApp our admin to place your order.">WhatsApp admin untuk buat pesanan.</li>
+          <li class="i18n" data-en="Make payment.">Buat pembayaran.</li>
+          <li class="i18n" data-en="Delivery within 3 working days. Stock is made fresh to order (no urgent / ready stock).">Delivery dalam 3 hari bekerja. Stok dibuat fresh ikut order (tiada urgent / ready stock).</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3>Delivery</h3>
+        <ul>
+          <li class="i18n" data-en="<b>KL &amp; Selangor</b> — Lalamove, no min order, pay the rider directly on arrival."><b>KL &amp; Selangor</b> — Lalamove, tiada min order, bayar terus ke rider selepas sampai.</li>
+          <li class="i18n" data-en="<b>Outstation</b> — cold courier (ice box + ice), from RM40, paid to us."><b>Luar kawasan</b> — cold courier (ice box + ice), dari RM40, bayar kepada kami.</li>
+          <li class="i18n" data-en="<b>Self-pickup Cyberjaya</b> — Mon–Sun, 8 am – 11 pm."><b>Self-pickup Cyberjaya</b> — Isnin–Ahad, 8 pagi – 11 malam.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Free Delivery</h3>
+        <ul>
+          <li class="i18n" data-en="<b>Klang Valley</b> — free for orders of RM550 in a single order."><b>Klang Valley</b> — percuma untuk order RM550 dalam 1 pesanan.</li>
+          <li class="i18n" data-en="<b>Cyberjaya</b> — free for a min order of RM150."><b>Cyberjaya</b> — percuma untuk min order RM150.</li>
+        </ul>
+        <a class="btn btn-primary js-order" target="_blank" rel="noopener" href="#" style="margin-top:16px;width:100%;justify-content:center">Order Online</a>
+        <a class="btn btn-line js-wa i18n" data-en="WhatsApp to Order" target="_blank" rel="noopener" href="#" style="margin-top:10px;width:100%;justify-content:center">WhatsApp untuk Order</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <h3 class="i18n" data-en="Eat healthy, stress-free ✨">Jom makan sihat tanpa stress ✨</h3>
+    <p class="i18n" data-en="Easy to reheat, easy to store, and most importantly — easy to stay consistent.">Mudah panaskan, mudah simpan, dan paling penting — mudah untuk kau kekal konsisten.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+      <a class="btn btn-primary js-order" target="_blank" rel="noopener" href="#">Order Online <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <a class="btn btn-ghost js-wa" target="_blank" rel="noopener" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.8l-.3-.2-2.8.8.8-2.7-.2-.3A8 8 0 0 1 12 4zm-2.6 3.8c-.2 0-.5 0-.7.4-.3.4-.9 1-.9 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.1 2.3 1 2.8.8 3.3.7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.4-.1-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp</a>
+    </div>
+    <a class="handle" id="ig-handle" href="#">@dietliciouss.my</a>
+    <div class="foot-meta">Dietliciouss · Salud Kitchen Sdn Bhd · Cyberjaya, Selangor</div>
+  </div>
+</footer>
+
+<div class="order-bar">
+  <a class="btn btn-primary js-order" target="_blank" rel="noopener" href="#">Order Online</a>
+  <a class="btn btn-line js-wa" target="_blank" rel="noopener" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.8l-.3-.2-2.8.8.8-2.7-.2-.3A8 8 0 0 1 12 4zm-2.6 3.8c-.2 0-.5 0-.7.4-.3.4-.9 1-.9 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.1 2.3 1 2.8.8 3.3.7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.4-.1-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp</a>
+</div>
+
+<script>
+  /* ====== TUKAR DI SINI (kalau perlu) ====== */
+  const WHATSAPP_LINK = "https://wa.link/bp6qrq";
+  const ORDER_LINK    = "https://order-dierliciouss-final.vercel.app/";
+  const INSTAGRAM_HANDLE = "dietliciouss.my";  // sahkan ejaan handle sebenar kau
+  /* ========================================= */
+
+  // wire order + whatsapp buttons
+  document.querySelectorAll('.js-wa').forEach(a=>a.href=WHATSAPP_LINK);
+  document.querySelectorAll('.js-order').forEach(a=>a.href=ORDER_LINK);
+
+  // capture BM (original) markup for every translatable node
+  const nodes=[...document.querySelectorAll('.i18n')];
+  nodes.forEach(n=>{ if(n.dataset.bm===undefined) n.dataset.bm=n.innerHTML; });
+
+  function setLang(l){
+    document.documentElement.lang = (l==='en') ? 'en' : 'ms';
+    nodes.forEach(n=>{ const v=n.dataset[l]; if(v!==undefined) n.innerHTML=v; });
+    document.querySelectorAll('.lang button').forEach(b=>{
+      b.setAttribute('aria-pressed', String(b.dataset.lang===l));
+    });
+  }
+
+  document.querySelectorAll('.lang button').forEach(b=>{
+    b.addEventListener('click', ()=> setLang(b.dataset.lang));
+  });
+
+  // instagram handle
+  const ig=document.getElementById('ig-handle');
+  ig.href="https://instagram.com/"+INSTAGRAM_HANDLE;
+  ig.textContent="@"+INSTAGRAM_HANDLE;
+
+  // default language: BM
+  setLang('bm');
+
+  // active nav highlight
+  const links=[...document.querySelectorAll('.nav a')];
+  const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.remove('active')); const a=map.get(e.target.id); if(a)a.classList.add('active'); } });
+  },{rootMargin:"-45% 0px -50% 0px",threshold:0});
+  document.querySelectorAll('main section, #top').forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
