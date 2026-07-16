@@ -246,6 +246,10 @@
 
   <!-- PAKEJ JULAI -->
   <section id="pakej">
+    <div id="promo-mixchicken" style="margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto">
+      <img src="images/dish-19.jpg" alt="Promo Mix Chicken Chop — 16 to 19 July" style="width:100%;display:block;border-radius:var(--radius);box-shadow:var(--shadow-lg)">
+      <a class="btn btn-primary js-order" target="_blank" rel="noopener" href="#" style="margin-top:14px;width:100%;justify-content:center">Order Sekarang — RM100</a>
+    </div>
     <div class="sec-head">
       <span class="sec-eyebrow"><svg class="sprig" width="14" height="14"><use href="#sprig"/></svg> <span class="i18n" data-en="This Month's Packages">Pakej Bulan Ini</span></span>
       <h2 class="i18n" data-en="July Packages">Pakej Julai</h2>
@@ -738,6 +742,16 @@
 
   // default language: BM
   setLang('bm');
+
+  // PROMO — auto-hide "Mix Chicken Chop" banner after 19 July 2026 23:59:59 (Asia/Kuala_Lumpur)
+  // No manual cleanup needed after that date; this block can be deleted anytime once expired.
+  (function hideExpiredPromo(){
+    var PROMO_END = new Date('2026-07-19T23:59:59+08:00');
+    if (new Date() > PROMO_END) {
+      var el = document.getElementById('promo-mixchicken');
+      if (el) el.remove();
+    }
+  })();
 
   // active nav highlight
   const links=[...document.querySelectorAll('.nav a')];
